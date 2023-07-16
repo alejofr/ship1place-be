@@ -1,0 +1,2017 @@
+{
+	"info": {
+		"_postman_id": "4259d0e3-e8d4-4ac8-b61e-b4021471caf6",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10352369",
+		"_collection_link": "https://grey-firefly-809472.postman.co/workspace/backend-ship1place~d27ba088-097f-49a8-a89a-c37195ce1c5e/collection/10352369-4259d0e3-e8d4-4ac8-b61e-b4021471caf6?action=share&creator=10352369&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "UserRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/register?first_name=test4&last_name=test4&email=freitezabraham.test4@gmail.com&password=123456&phone=15151548&address=addressTest&country_id=70&province_id=2&city_id=1&consent_to_receive_newsletter=1&business=1&byCreated=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "test4"
+								},
+								{
+									"key": "last_name",
+									"value": "test4"
+								},
+								{
+									"key": "email",
+									"value": "freitezabraham.test4@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "phone",
+									"value": "15151548"
+								},
+								{
+									"key": "address",
+									"value": "addressTest"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "1"
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "1"
+								},
+								{
+									"key": "business",
+									"value": "1"
+								},
+								{
+									"key": "byCreated",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/login?email=admin@gmail.com&password=123456",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|z86EoHiEsG1oobOfSCpb94UEic4brxoCz2F6v1Tw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/logout",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CreateUserClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/register?first_name=test2&last_name=test2&email=freitezabraham.test@gmail.com&password=123456&phone=15151548&address=addressTest&country_id=70&province_id=2&city_id=1&consent_to_receive_newsletter=1&business=1&byCreated=1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "test2"
+								},
+								{
+									"key": "last_name",
+									"value": "test2"
+								},
+								{
+									"key": "email",
+									"value": "freitezabraham.test@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "phone",
+									"value": "15151548"
+								},
+								{
+									"key": "address",
+									"value": "addressTest"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "1"
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "1"
+								},
+								{
+									"key": "business",
+									"value": "1"
+								},
+								{
+									"key": "byCreated",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUserSubClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/register-sub-client?first_name=tesds&last_name=ss&email=test_subclient2@gmail.com&password=123456&phone=15151548&address=addressTest&country_id=70&province_id=2&city_id=1&consent_to_receive_newsletter=0&business=1&user_id_parent=2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"register-sub-client"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "tesds"
+								},
+								{
+									"key": "last_name",
+									"value": "ss"
+								},
+								{
+									"key": "email",
+									"value": "test_subclient2@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "phone",
+									"value": "15151548"
+								},
+								{
+									"key": "address",
+									"value": "addressTest"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "1"
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "0"
+								},
+								{
+									"key": "business",
+									"value": "1"
+								},
+								{
+									"key": "user_id_parent",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/2?first_name=Juan",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"2"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "Juan"
+								},
+								{
+									"key": "last_name",
+									"value": "test2",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "15151548",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "addressTest",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "70",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "business",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "user_id_parent",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisableUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/2/disable",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"2",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users?limit=50&page=1&orderBy=first_name&ascending=1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "first_name"
+								},
+								{
+									"key": "ascending",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/search?search=a&country_id=1&province_id=2&city_id=3",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "country_id",
+									"value": "1"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePasswordUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/change-password?password=123456",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/3",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries?search=b&page=1&limit=50&orderBy=name&ascending=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "b"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/country/search?search=vir",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"country",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "vir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCountry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries?name=Venezuela&code=ve&phone_code=+58",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Venezuela"
+								},
+								{
+									"key": "code",
+									"value": "ve"
+								},
+								{
+									"key": "phone_code",
+									"value": "+58"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries/3",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCountry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries/239?code=JPN",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries",
+								"239"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Japon",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "JPN"
+								},
+								{
+									"key": "phone_code",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries/239",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries",
+								"239"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provinces",
+			"item": [
+				{
+					"name": "Provinces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces?search=Southern&page=1&limit=50&orderBy=name&ascending=1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Southern"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchProvince",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/province/search?country_id=39",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"province",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "B",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProvince",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces?name=Lo que sea&code=LQS&country_id=10",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lo que sea"
+								},
+								{
+									"key": "code",
+									"value": "LQS"
+								},
+								{
+									"key": "country_id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowProvince",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces/4852",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces",
+								"4852"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProvince",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces/4852?name=VERGA&code=EPA&country_id=262",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces",
+								"4852"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "VERGA"
+								},
+								{
+									"key": "code",
+									"value": "EPA"
+								},
+								{
+									"key": "country_id",
+									"value": "262"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProvince",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces/4852",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces",
+								"4852"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities?limit=50&page=2&search=a&orderBy=name&ascending=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/city/search?province_id=3883&search=a",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"city",
+								"search"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "39",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "3883"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities?name=Lo que sea&country_id=70&province_id=11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lo que sea"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities/14",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities/2?country_id=70&province_id=11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities",
+								"2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Canillo",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities/141",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities",
+								"141"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Log",
+			"item": [
+				{
+					"name": "CurrentLogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/current-logs",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"current-logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HistoryLogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/history-logs?date=2023-03-10",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"history-logs"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-03-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"user_id\": 2,\r\n            \"country_id\": 1,\r\n            \"city_id\": 16709,\r\n            \"email\": \"shipper_create_shipmentapi@dhltestmail.com\",\r\n            \"name\": \"Johnny Steward\",\r\n            \"contact_name\": \"DPR Wholesalers\",\r\n            \"address1\": \"130\",\r\n            \"address2\": \"rue wellington\",\r\n            \"zip\": \"H2S2M2\",\r\n            \"phone\": \"4972463\",\r\n            \"isSender\": 1,\r\n            \"extra\": {\r\n                \"mobilePhone\": \"2563456227231\",\r\n                \"registrationNumbers\": [\r\n                    {\r\n                        \"typeCode\": \"VAT\",\r\n                        \"number\": \"244444911\",\r\n                        \"issuerCountryCode\": \"GB\"\r\n                    }\r\n                ],\r\n                \"typeCode\": \"business\"\r\n            }\r\n        },\r\n        {\r\n            \"user_id\": 2,\r\n            \"country_id\": 232,\r\n            \"city_id\": 50009,\r\n            \"email\": \"recipient_create_shipmentapi@dhltestmail.com\",\r\n            \"name\": \"Hillary Dickins\",\r\n            \"contact_name\": \"DoCo Event Airline Catering\",\r\n            \"address1\": \"200\",\r\n            \"address2\": \"Great South-West Rd\",\r\n            \"zip\": \"TW4 6FD\",\r\n            \"phone\": \"1123123\",\r\n            \"isSender\": 0,\r\n            \"extra\": {\r\n                \"registrationNumbers\": [\r\n                    {\r\n                        \"typeCode\": \"VAT\",\r\n                        \"number\": \"12345678\",\r\n                        \"issuerCountryCode\": \"GB\"\r\n                    }\r\n                ],\r\n                \"typeCode\": \"business\"    \r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/customers",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/customers?user_id=2&limit=50&page=1&orderBy=name&ascending=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/customers/2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/customer/search?user_id=3&isSender=1&search=a",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customer",
+								"search"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "3"
+								},
+								{
+									"key": "isSender",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/customers/1?isSender=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "70",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "38592",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Juana Perez",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "juana@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "address1",
+									"value": "bingo",
+									"disabled": true
+								},
+								{
+									"key": "zip",
+									"value": "1515",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "+584145153163",
+									"disabled": true
+								},
+								{
+									"key": "isSender",
+									"value": "0"
+								},
+								{
+									"key": "extra",
+									"value": "{\"id\":  26904790}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/customers/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Packages",
+			"item": [
+				{
+					"name": "CreatePackage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/packages?user_id=2&name=DHL Envelope&height=1.54&long=2.55&width=5.55",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"packages"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "name",
+									"value": "DHL Envelope"
+								},
+								{
+									"key": "height",
+									"value": "1.54"
+								},
+								{
+									"key": "long",
+									"value": "2.55"
+								},
+								{
+									"key": "width",
+									"value": "5.55"
+								},
+								{
+									"key": "dimension",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Packages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/packages?user_id=2&limit=50&page=1&search=a&orderBy=name&ascending=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"packages"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchPackage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/package/search?user_id=2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"package",
+								"search"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowPackage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/packages/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"packages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePackage",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/packages/1?height=5.54",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"packages",
+								"1"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "DHL Envelope",
+									"disabled": true
+								},
+								{
+									"key": "height",
+									"value": "5.54"
+								},
+								{
+									"key": "long",
+									"value": "2.55",
+									"disabled": true
+								},
+								{
+									"key": "width",
+									"value": "5.55",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePackage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/packages/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"packages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DHL",
+			"item": [
+				{
+					"name": "Shipments",
+					"item": [
+						{
+							"name": "CreateShipment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"plannedShippingDateAndTime\": \"2023-05-24\",\r\n    \"pickup\": {\r\n        \"isRequested\": false\r\n    },\r\n    \"productCode\": \"P\",\r\n    \"getRateEstimates\": false,\r\n    \"shipperDetails\": {\r\n      \"postalAddress\": {\r\n        \"postalCode\": \"H2S2M2\",\r\n        \"cityName\": \"Montreal\",\r\n        \"countryCode\": \"CA\",\r\n        \"addressLine1\": \"130\",\r\n        \"addressLine2\": \"rue wellington\",\r\n        \"countryName\": \"CANADA\",\r\n        \"country_id\": 1,\r\n        \"city_id\": 16709\r\n      },\r\n      \"contactInformation\": {\r\n        \"email\": \"shipper_create_shipmentapi@dhltestmail.com\",\r\n        \"phone\": \"4972463\",\r\n        \"mobilePhone\": \"2563456227231\",\r\n        \"companyName\": \"DPR Wholesalers\",\r\n        \"fullName\": \"Johnny Steward\"\r\n      },\r\n      \"registrationNumbers\": [\r\n        {\r\n          \"typeCode\": \"VAT\",\r\n          \"number\": \"244444911\",\r\n          \"issuerCountryCode\": \"GB\"\r\n        }\r\n      ],\r\n      \"typeCode\": \"business\"\r\n    },\r\n    \"receiverDetails\": {\r\n      \"postalAddress\": {\r\n        \"postalCode\": \"TW4 6FD\",\r\n        \"cityName\": \"Hounslow\",\r\n        \"countryCode\": \"GB\",\r\n        \"addressLine1\": \"200\",\r\n        \"addressLine2\": \"Great South-West Rd\",\r\n        \"addressLine3\": \"McFarley Drive\",\r\n        \"countryName\": \"UNITED KINGDOM\",\r\n        \"country_id\": 232,\r\n        \"city_id\": 50009\r\n      },\r\n      \"contactInformation\": {\r\n        \"email\": \"recipient_create_shipmentapi@dhltestmail.com\",\r\n        \"phone\": \"1123123\",\r\n        \"mobilePhone\": \"256345123\",\r\n        \"companyName\": \"DoCo Event Airline Catering\",\r\n        \"fullName\": \"Hillary Dickins\"\r\n      },\r\n      \"registrationNumbers\": [\r\n        {\r\n          \"typeCode\": \"VAT\",\r\n          \"number\": \"12345678\",\r\n          \"issuerCountryCode\": \"GB\"\r\n        }\r\n      ],\r\n      \"typeCode\": \"business\"\r\n    },\r\n    \"packages\": [\r\n      {\r\n        \"weight\": 1,\r\n        \"dimensions\": {\r\n          \"length\": 1,\r\n          \"width\": 1,\r\n          \"height\": 1\r\n        }\r\n      }\r\n    ],\r\n    \"price\": 120.00,\r\n    \"currency\": \"CAD\",\r\n    \"content\": {\r\n        \"isCustomsDeclarable\": true,\r\n        \"declaredValue\": 120,\r\n        \"declaredValueCurrency\": \"CAD\",\r\n        \"exportDeclaration\": {\r\n            \"lineItems\": [\r\n                {\r\n                \"number\": 1,\r\n                \"description\": \"Harry Steward biography first edition\",\r\n                \"price\": 15,\r\n                \"quantity\": {\r\n                    \"value\": 4,\r\n                    \"unitOfMeasurement\": \"GM\"\r\n                },\r\n                \"commodityCodes\": [\r\n                    {\r\n                    \"typeCode\": \"outbound\",\r\n                    \"value\": \"84713000\"\r\n                    },\r\n                    {\r\n                    \"typeCode\": \"inbound\",\r\n                    \"value\": \"5109101110\"\r\n                    }\r\n                ],\r\n                \"exportReasonType\": \"permanent\",\r\n                \"manufacturerCountry\": \"US\",\r\n                \"exportControlClassificationNumber\": \"US123456789\",\r\n                \"weight\": {\r\n                    \"netValue\": 0.1,\r\n                    \"grossValue\": 0.7\r\n                },\r\n                \"isTaxesPaid\": true,\r\n                \"additionalInformation\": [\r\n                    \"450pages\"\r\n                ],\r\n                \"customerReferences\": [\r\n                    {\r\n                    \"typeCode\": \"AFE\",\r\n                    \"value\": \"1299210\"\r\n                    }\r\n                ],\r\n                \"customsDocuments\": [\r\n                    {\r\n                    \"typeCode\": \"COO\",\r\n                    \"value\": \"MyDHLAPI - LN#1-CUSDOC-001\"\r\n                    }\r\n                ]\r\n                },\r\n                {\r\n                \"number\": 2,\r\n                \"description\": \"Andromeda Chapter 394 - Revenge of Brook\",\r\n                \"price\": 15,\r\n                \"quantity\": {\r\n                    \"value\": 4,\r\n                    \"unitOfMeasurement\": \"GM\"\r\n                },\r\n                \"commodityCodes\": [\r\n                    {\r\n                    \"typeCode\": \"outbound\",\r\n                    \"value\": \"6109100011\"\r\n                    },\r\n                    {\r\n                    \"typeCode\": \"inbound\",\r\n                    \"value\": \"5109101111\"\r\n                    }\r\n                ],\r\n                \"exportReasonType\": \"permanent\",\r\n                \"manufacturerCountry\": \"US\",\r\n                \"exportControlClassificationNumber\": \"US123456789\",\r\n                \"weight\": {\r\n                    \"netValue\": 0.1,\r\n                    \"grossValue\": 0.7\r\n                },\r\n                \"isTaxesPaid\": true,\r\n                \"additionalInformation\": [\r\n                    \"36pages\"\r\n                ],\r\n                \"customerReferences\": [\r\n                    {\r\n                    \"typeCode\": \"AFE\",\r\n                    \"value\": \"1299211\"\r\n                    }\r\n                ],\r\n                \"customsDocuments\": [\r\n                    {\r\n                    \"typeCode\": \"COO\",\r\n                    \"value\": \"MyDHLAPI - LN#1-CUSDOC-001\"\r\n                    }\r\n                ]\r\n                }\r\n            ],\r\n            \"invoice\": {\r\n                \"number\": \"2667168671\",\r\n                \"date\": \"2022-10-22\",\r\n                \"instructions\": [\r\n                \"Handle with care\"\r\n                ],\r\n                \"totalNetWeight\": 0.4,\r\n                \"totalGrossWeight\": 0.5,\r\n                \"customerReferences\": [\r\n                {\r\n                    \"typeCode\": \"UCN\",\r\n                    \"value\": \"UCN-783974937\"\r\n                },\r\n                {\r\n                    \"typeCode\": \"CN\",\r\n                    \"value\": \"CUN-76498376498\"\r\n                },\r\n                {\r\n                    \"typeCode\": \"RMA\",\r\n                    \"value\": \"MyDHLAPI-TESTREF-001\"\r\n                }\r\n                ],\r\n                \"termsOfPayment\": \"100 days\",\r\n                \"indicativeCustomsValues\": {\r\n                \"importCustomsDutyValue\": 150.57,\r\n                \"importTaxesValue\": 49.43\r\n                }\r\n            },\r\n            \"remarks\": [\r\n                {\r\n                \"value\": \"Right side up only\"\r\n                }\r\n            ],\r\n            \"additionalCharges\": [\r\n                {\r\n                \"value\": 10,\r\n                \"caption\": \"fee\",\r\n                \"typeCode\": \"freight\"\r\n                },\r\n                {\r\n                \"value\": 20,\r\n                \"caption\": \"freight charges\",\r\n                \"typeCode\": \"other\"\r\n                },\r\n                {\r\n                \"value\": 10,\r\n                \"caption\": \"ins charges\",\r\n                \"typeCode\": \"insurance\"\r\n                },\r\n                {\r\n                \"value\": 7,\r\n                \"caption\": \"rev charges\",\r\n                \"typeCode\": \"reverse_charge\"\r\n                }\r\n            ],\r\n            \"destinationPortName\": \"New York Port\",\r\n            \"placeOfIncoterm\": \"ShenZhen Port\",\r\n            \"payerVATNumber\": \"12345ED\",\r\n            \"recipientReference\": \"01291344\",\r\n            \"exporter\": {\r\n                \"id\": \"121233\",\r\n                \"code\": \"S\"\r\n            },\r\n            \"packageMarks\": \"Fragile glass bottle\",\r\n            \"declarationNotes\": [\r\n                {\r\n                \"value\": \"up to three declaration notes\"\r\n                }\r\n            ],\r\n            \"exportReference\": \"export reference\",\r\n            \"exportReason\": \"export reason\",\r\n            \"exportReasonType\": \"permanent\",\r\n            \"licenses\": [\r\n                {\r\n                \"typeCode\": \"export\",\r\n                \"value\": \"123127233\"\r\n                }\r\n            ],\r\n            \"shipmentType\": \"personal\",\r\n            \"customsDocuments\": [\r\n                {\r\n                \"typeCode\": \"INV\",\r\n                \"value\": \"MyDHLAPI - CUSDOC-001\"\r\n                }\r\n            ]\r\n        },\r\n        \"description\": \"Shipment Description\",\r\n        \"incoterm\": \"DAP\",\r\n        \"unitOfMeasurement\": \"metric\"\r\n    },\r\n    \"outputImageProperties\": {\r\n        \"printerDPI\": 300,\r\n        \"encodingFormat\": \"pdf\",\r\n        \"imageOptions\": [\r\n            {\r\n                \"typeCode\": \"waybillDoc\",\r\n                \"templateName\": \"ARCH_8x4\",\r\n                \"isRequested\": true,\r\n                \"hideAccountNumber\": false,\r\n                \"numberOfCopies\": 1\r\n            },\r\n            {\r\n                \"typeCode\": \"label\",\r\n                \"templateName\": \"ECOM26_84_001\",\r\n                \"isRequested\": true\r\n            }\r\n        ],\r\n        \"splitTransportAndWaybillDocLabels\": true,\r\n        \"allDocumentsInOneImage\": false,\r\n        \"splitDocumentsByPages\": true,\r\n        \"splitInvoiceAndReceipt\": true,\r\n        \"receiptAndLabelsInOneImage\": false\r\n    },\r\n    \"getTransliteratedResponse\": false,\r\n    \"estimatedDeliveryDate\": {\r\n        \"isRequested\": false,\r\n        \"typeCode\": \"QDDC\"\r\n    },\r\n    \"getAdditionalInformation\": [\r\n        {\r\n        \"typeCode\": \"pickupDetails\",\r\n        \"isRequested\": true\r\n        }\r\n    ],\r\n    \"service\": {\r\n        \"productName\": \"EXPRESS WORLDWIDE NONDOC\",\r\n        \"productCode\": \"P\",\r\n        \"localProductCode\": \"P\",\r\n        \"localProductCountryCode\": \"CA\",\r\n        \"networkTypeCode\": \"TD\",\r\n        \"isCustomerAgreement\": false,\r\n        \"weight\": {\r\n            \"volumetric\": 0.31,\r\n            \"provided\": 23.5,\r\n            \"unitOfMeasurement\": \"imperial\"\r\n        },\r\n        \"totalPrice\": [\r\n            {\r\n                \"currencyType\": \"BILLC\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"price\": 220.64\r\n            },\r\n            {\r\n                \"currencyType\": \"PULCL\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"price\": 220.64\r\n            },\r\n            {\r\n                \"currencyType\": \"BASEC\",\r\n                \"priceCurrency\": \"EUR\",\r\n                \"price\": 147.02\r\n            }\r\n        ],\r\n        \"totalPriceBreakdown\": [\r\n            {\r\n                \"currencyType\": \"BILLC\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"priceBreakdown\": [\r\n                    {\r\n                        \"typeCode\": \"SPRQT\",\r\n                        \"price\": 181.19\r\n                    },\r\n                    {\r\n                        \"typeCode\": \"STDIS\",\r\n                        \"price\": 402.97\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"currencyType\": \"PULCL\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"priceBreakdown\": [\r\n                    {\r\n                        \"typeCode\": \"SPRQT\",\r\n                        \"price\": 181.19\r\n                    },\r\n                    {\r\n                        \"typeCode\": \"STDIS\",\r\n                        \"price\": 402.97\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"currencyType\": \"BASEC\",\r\n                \"priceCurrency\": \"EUR\",\r\n                \"priceBreakdown\": [\r\n                    {\r\n                        \"typeCode\": \"SPRQT\",\r\n                        \"price\": 120.73\r\n                    },\r\n                    {\r\n                        \"typeCode\": \"STDIS\",\r\n                        \"price\": 268.53\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"detailedPriceBreakdown\": [\r\n            {\r\n                \"currencyType\": \"BILLC\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"breakdown\": [\r\n                    {\r\n                        \"name\": \"EXPRESS WORLDWIDE\",\r\n                        \"price\": 181.19,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 336.51,\r\n                                \"rate\": 65,\r\n                                \"basePrice\": 517.7\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"name\": \"EMERGENCY SITUATION\",\r\n                        \"serviceCode\": \"CR\",\r\n                        \"localServiceCode\": \"CR\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 3.06,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": true,\r\n                        \"priceBreakdown\": []\r\n                    },\r\n                    {\r\n                        \"name\": \"FUEL SURCHARGE\",\r\n                        \"serviceCode\": \"FF\",\r\n                        \"localServiceCode\": \"FF\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 36.39,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": false,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 66.46,\r\n                                \"rate\": 64.618,\r\n                                \"basePrice\": 102.85\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"currencyType\": \"PULCL\",\r\n                \"priceCurrency\": \"CAD\",\r\n                \"breakdown\": [\r\n                    {\r\n                        \"name\": \"EXPRESS WORLDWIDE\",\r\n                        \"price\": 181.19,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 336.51,\r\n                                \"rate\": 65,\r\n                                \"basePrice\": 517.7\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"name\": \"EMERGENCY SITUATION\",\r\n                        \"serviceCode\": \"CR\",\r\n                        \"localServiceCode\": \"CR\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 3.06,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": true,\r\n                        \"priceBreakdown\": []\r\n                    },\r\n                    {\r\n                        \"name\": \"FUEL SURCHARGE\",\r\n                        \"serviceCode\": \"FF\",\r\n                        \"localServiceCode\": \"FF\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 36.39,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": false,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 66.46,\r\n                                \"rate\": 64.618,\r\n                                \"basePrice\": 102.85\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"currencyType\": \"BASEC\",\r\n                \"priceCurrency\": \"EUR\",\r\n                \"breakdown\": [\r\n                    {\r\n                        \"name\": \"EXPRESS WORLDWIDE\",\r\n                        \"price\": 120.73,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 224.24,\r\n                                \"rate\": 65,\r\n                                \"basePrice\": 344.97\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"name\": \"EMERGENCY SITUATION\",\r\n                        \"serviceCode\": \"CR\",\r\n                        \"localServiceCode\": \"CR\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 2.04,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": true,\r\n                        \"priceBreakdown\": []\r\n                    },\r\n                    {\r\n                        \"name\": \"FUEL SURCHARGE\",\r\n                        \"serviceCode\": \"FF\",\r\n                        \"localServiceCode\": \"FF\",\r\n                        \"serviceTypeCode\": \"SCH\",\r\n                        \"price\": 24.25,\r\n                        \"isCustomerAgreement\": false,\r\n                        \"isMarketedService\": false,\r\n                        \"priceBreakdown\": [\r\n                            {\r\n                                \"priceType\": \"DISCOUNT\",\r\n                                \"typeCode\": \"W\",\r\n                                \"price\": 44.29,\r\n                                \"rate\": 64.618,\r\n                                \"basePrice\": 68.54\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"pickupCapabilities\": {\r\n            \"nextBusinessDay\": false,\r\n            \"localCutoffDateAndTime\": \"2023-04-28T16:30:00\",\r\n            \"GMTCutoffTime\": \"17:30:00\",\r\n            \"pickupEarliest\": \"09:00:00\",\r\n            \"pickupLatest\": \"19:00:00\",\r\n            \"originServiceAreaCode\": \"YUL\",\r\n            \"originFacilityAreaCode\": \"GTW\",\r\n            \"pickupAdditionalDays\": 0,\r\n            \"pickupDayOfWeek\": 5\r\n        },\r\n        \"deliveryCapabilities\": {\r\n            \"deliveryTypeCode\": \"QDDC\",\r\n            \"estimatedDeliveryDateAndTime\": \"2023-05-02T23:59:00\",\r\n            \"destinationServiceAreaCode\": \"LHR\",\r\n            \"destinationFacilityAreaCode\": \"HSC\",\r\n            \"deliveryAdditionalDays\": 0,\r\n            \"deliveryDayOfWeek\": 2,\r\n            \"totalTransitDays\": 4\r\n        },\r\n        \"pricingDate\": \"2023-05-02\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/dhl/shipments",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"dhl",
+										"shipments"
+									],
+									"query": [
+										{
+											"key": "plannedShippingDateAndTime",
+											"value": "2023-04-28T10:00:00GMT-4:00",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetImageShipment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/dhl/shipments/1/get-image?typeCode=waybill&pickupYearAndMonth=2023-10",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"dhl",
+										"shipments",
+										"1",
+										"get-image"
+									],
+									"query": [
+										{
+											"key": "typeCode",
+											"value": "waybill"
+										},
+										{
+											"key": "pickupYearAndMonth",
+											"value": "2023-10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trackings",
+					"item": [
+						{
+							"name": "GetTracking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/dhl/tracking/2796217771",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"dhl",
+										"tracking",
+										"2796217771"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pickup",
+					"item": [
+						{
+							"name": "StorePickup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"shipment_id\": 2,\r\n    \"plannedPickupDate\": \"2023-05-12\",\r\n    \"plannedPickupTime\": \"09:19:40\",\r\n    \"closeTime\": \"18:00\",\r\n    \"location\": \"reception\",\r\n    \"locationType\": \"business\",\r\n    \"shipperDetails\": {\r\n      \"postalAddress\": {\r\n        \"postalCode\": \"H2S2M2\",\r\n        \"cityName\": \"Montreal\",\r\n        \"countryCode\": \"CA\",\r\n        \"addressLine1\": \"130\",\r\n        \"addressLine2\": \"rue wellington\"\r\n        // \"countryName\": \"CANADA\"\r\n      },\r\n      \"contactInformation\": {\r\n        \"email\": \"shipper_create_shipmentapi@dhltestmail.com\",\r\n        \"phone\": \"4972463\",\r\n        \"mobilePhone\": \"2563456227231\",\r\n        \"companyName\": \"DPR Wholesalers\",\r\n        \"fullName\": \"Johnny Steward\"\r\n      }\r\n    },\r\n    \"receiverDetails\": {\r\n     \"postalAddress\": {\r\n        \"postalCode\": \"TW4 6FD\",\r\n        \"cityName\": \"Hounslow\",\r\n        \"countryCode\": \"GB\",\r\n        \"addressLine1\": \"200\",\r\n        \"addressLine2\": \"Great South-West Rd\",\r\n        \"addressLine3\": \"McFarley Drive\"\r\n        // \"countryName\": \"UNITED KINGDOM\"\r\n      },\r\n      \"contactInformation\": {\r\n        \"email\": \"recipient_create_shipmentapi@dhltestmail.com\",\r\n        \"phone\": \"1123123\",\r\n        \"mobilePhone\": \"256345123\",\r\n        \"companyName\": \"DoCo Event Airline Catering\",\r\n        \"fullName\": \"Hillary Dickins\"\r\n      }\r\n    },\r\n    \"shipmentDetails\": {\r\n        \"declaredValue\": 120,\r\n        \"unitOfMeasurement\": \"metric\",\r\n        \"isCustomsDeclarable\": true,\r\n        \"declaredValueCurrency\": \"CAD\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/dhl/pickups",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"dhl",
+										"pickups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletePickup",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/dhl/pickups/1?requestorName=Hillary Dickins&reason=Unplanned leave",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"dhl",
+										"pickups",
+										"1"
+									],
+									"query": [
+										{
+											"key": "requestorName",
+											"value": "Hillary Dickins"
+										},
+										{
+											"key": "reason",
+											"value": "Unplanned leave"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GetRates",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"shipperDetails\": {\r\n        \"postalCode\": \"H2S2M2\",\r\n        \"cityName\": \"Montreal\",\r\n        \"addressLine1\": \"130\",\r\n        \"addressLine2\": \"rue wellington\",\r\n        \"countryCode\": \"CA\"\r\n    },\r\n    \"receiverDetails\": {\r\n        \"postalCode\": \"TW4 6FD\",\r\n        \"cityName\": \"Hounslow\",\r\n        \"addressLine1\": \"200\",\r\n        \"addressLine2\": \"Great South-West Rd\",\r\n        \"countryCode\": \"GB\"\r\n    },\r\n    \"plannedShippingDateAndTime\": \"2023-04-28T10:00:00GMT-4:00\",\r\n    \"unitOfMeasurement\": \"metric\",\r\n    \"isCustomsDeclarable\": true,\r\n    \"monetaryAmount\": [\r\n        {\r\n            \"typeCode\": \"declaredValue\",\r\n            \"value\": 100,\r\n            \"currency\": \"CZK\"\r\n        }\r\n    ],\r\n    \"packages\": [\r\n        {\r\n            \"weight\": 10.5,\r\n            \"dimensions\": {\r\n                \"length\": 14,\r\n                \"width\": 10,\r\n                \"height\": 5\r\n            }\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/dhl/rates",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"dhl",
+								"rates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shipements",
+			"item": [
+				{
+					"name": "ShowShipement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/shipments/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"shipments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shipements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/shipments?user_id=2&limit=50&page=1&search=a&orderBy=tracking_number&ascending=0&dateFrom=2023-05-23&dateTo=2023-05-25&service=dhl&wayBill=2796217771&status=outstanding",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"shipments"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "orderBy",
+									"value": "tracking_number"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2023-05-23"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-05-25"
+								},
+								{
+									"key": "service",
+									"value": "dhl"
+								},
+								{
+									"key": "wayBill",
+									"value": "2796217771"
+								},
+								{
+									"key": "status",
+									"value": "outstanding"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteShipement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/shipments/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"shipments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "CreateTemplate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 2,\r\n    \"sender_id\": 1,\r\n    \"receiver_id\": 2,\r\n    \"name\": \"Ejemplo 1\",\r\n    \"pieces\": [\r\n        {\r\n        \"weight\": 1,\r\n        \"dimensions\": {\r\n          \"length\": 1,\r\n          \"width\": 1,\r\n          \"height\": 1\r\n        }\r\n      }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/templates",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"templates"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/templates?user_id=2&limit=50&page=1&search=a&orderBy=name&ascending=0",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"templates"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "ascending",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowTemplate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/templates/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"templates",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTemplate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"user_id\": 2\r\n    // \"sender_id\": 1,\r\n    // \"receiver_id\": 2,\r\n    \"name\": \"Ejemplo 1 actualizado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/templates/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"templates",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTemplate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/templates/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"templates",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RecoverPasswordUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/user/recover-password?email=freitezabraham@gmail.com",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"user",
+						"recover-password"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "freitezabraham@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "3|cOo93ISK9E5cznFwDe16jRHZ2Xzd9ewSMF3OBNog",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_API",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
